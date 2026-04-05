@@ -44,6 +44,17 @@ WHO_TO_BG = {
     "SUSHI MASTER":       "bg_sushi_master.png",
     "SHOKUNIN":           "bg_sushi_master.png",
     "CHEF":               "bg_chef.png",
+    # 추가 초상화 (10명)
+    "ANNE FRANK":         "bg_annefrank.png",
+    "SENECA":             "bg_seneca.png",
+    "OSCAR WILDE":        "bg_oscarwilde.png",
+    "VINCENT VAN GOGH":   "bg_vangogh.png",
+    "EPICURUS":           "bg_epicurus.png",
+    "WAYNE GRETZKY":      "bg_gretzky.png",
+    "NAPOLEON HILL":      "bg_napoleonhill.png",
+    "JIM ROHN":           "bg_jimrohn.png",
+    "MARIE MODIANO":      "bg_mariemodiano.png",
+    "ST. AUGUSTINE":      "bg_staugustine.png",
 }
 
 # 인물 초상화 색상
@@ -74,6 +85,16 @@ PORTRAIT_COLORS = {
     "bg_dalio.jpg":        {"accent": "#8AB1FF", "atmos": "#050A1A"}, # Gemini Nano Style
     "bg_sushi_master.png": {"accent": "#FFD54F", "atmos": "#0A0A0A"},
     "bg_chef.png":         {"accent": "#C9A96E", "atmos": "#0F0F0F"},
+    "bg_annefrank.png":    {"accent": "#FFB74D", "atmos": "#1A0F05"},
+    "bg_seneca.png":       {"accent": "#CD853F", "atmos": "#1A0A05"},
+    "bg_oscarwilde.png":   {"accent": "#CE93D8", "atmos": "#1A0A1A"},
+    "bg_vangogh.png":      {"accent": "#FFD700", "atmos": "#0A0F1A"},
+    "bg_epicurus.png":     {"accent": "#FFB74D", "atmos": "#1A0F0A"},
+    "bg_gretzky.png":      {"accent": "#90CAF9", "atmos": "#0A0A1A"},
+    "bg_napoleonhill.png": {"accent": "#FFB74D", "atmos": "#1A0F05"},
+    "bg_jimrohn.png":      {"accent": "#FFB300", "atmos": "#1A0F05"},
+    "bg_mariemodiano.png": {"accent": "#F48FB1", "atmos": "#1A0A0F"},
+    "bg_staugustine.png":  {"accent": "#FFD54F", "atmos": "#1A0F0A"},
 }
 
 # 카테고리별 전용 배경 이미지 + 색상
@@ -367,19 +388,19 @@ body{width:100vw;height:100vh;overflow:hidden;background:#060609;color:#F0EDE6;f
 .title-sub{font-size:22px;letter-spacing:12px;margin-top:20px;border-top:1.5px solid;padding-top:20px;text-shadow:0 0 20px rgba(0,0,0,0.8);}
 .slide-title{background:#050810;}
 
-/* 메뉴 카드 */
-.slide-menu{background:#000;justify-content:flex-start;padding-top:55px;}
-.menu-header{font-family:'Cormorant Garamond';font-size:48px;letter-spacing:10px;text-transform:uppercase;margin-bottom:40px;text-align:center;}
-.cards{display:flex;gap:35px;justify-content:center;padding:0 50px;}
-.card{border:1px solid;border-radius:18px;overflow:hidden;background:rgba(8,8,16,0.95);}
-.cards-1 .card{width:500px;height:680px;}
-.cards-2 .card{width:420px;height:640px;}
-.cards-3 .card{width:360px;height:600px;}
-.card-img{height:65%;overflow:hidden;}
+/* 메뉴 카드 - TV overscan safe area (5% 여백) */
+.slide-menu{background:#000;justify-content:flex-start;padding:4vh 5vw 4vh 5vw;}
+.menu-header{font-family:'Cormorant Garamond';font-size:clamp(28px,3.5vmin,48px);letter-spacing:10px;text-transform:uppercase;margin-bottom:2.5vh;text-align:center;}
+.cards{display:flex;gap:2.5vw;justify-content:center;padding:0;}
+.card{border:1px solid;border-radius:18px;overflow:hidden;background:rgba(8,8,16,0.95);display:flex;flex-direction:column;}
+.cards-1 .card{width:35vw;height:80vh;}
+.cards-2 .card{width:30vw;height:78vh;}
+.cards-3 .card{width:26vw;height:76vh;}
+.card-img{flex:1;overflow:hidden;min-height:0;}
 .card-img img{width:100%;height:100%;object-fit:cover;}
-.card-body{padding:25px;text-align:center;}
-.card-name{font-size:26px;font-weight:400;margin-bottom:10px;}
-.card-price{font-size:34px;font-weight:800;}
+.card-body{padding:2vh 1.5vw;text-align:center;flex-shrink:0;}
+.card-name{font-size:clamp(16px,2.2vmin,26px);font-weight:400;margin-bottom:0.8vh;}
+.card-price{font-size:clamp(22px,2.8vmin,34px);font-weight:800;}
 
 /* 명언 슬라이드 - 50:50 + Ken Burns 줌 */
 .slide-extra{flex-direction:row;align-items:stretch;}
