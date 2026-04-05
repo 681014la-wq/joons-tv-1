@@ -424,13 +424,10 @@ body{width:100vw;height:100vh;overflow:hidden;background:#060609;color:#F0EDE6;f
 .slide.active .extra-en{animation:fadeUp 1.2s ease 0.9s forwards;}
 .slide.active .extra-ko{animation:fadeUp 1.2s ease 1.3s forwards;}
 
-/* 진행바 */
-.progress-bar{position:fixed;bottom:0;left:0;height:7px;background:#C9A96E;z-index:999;box-shadow:0 0 20px rgba(201,169,110,0.6);}
 </style>
 </head>
 <body>
 <div class="slideshow" id="ss">''' + "".join(slides) + '''</div>
-<div class="progress-bar" id="pb"></div>
 <script>
 const slides=document.querySelectorAll('.slide');
 let cur=0, t0=Date.now(), paused=false;
@@ -440,8 +437,6 @@ function show(i){
   slides[cur].classList.add('active');
   const s=slides[cur];
   document.body.style.background=s.dataset.atmos||'#060609';
-  document.getElementById('pb').style.background=s.dataset.accent||'#C9A96E';
-  document.getElementById('pb').style.boxShadow='0 0 20px '+(s.dataset.accent||'#C9A96E');
   t0=Date.now();
 }
 function tick(){
@@ -450,7 +445,6 @@ function tick(){
     const fast=s.classList.contains('slide-title')||s.classList.contains('slide-menu');
     const dur=fast?3000:10000;
     const pct=Math.min((Date.now()-t0)/dur*100,100);
-    document.getElementById('pb').style.width=pct+'%';
     if(pct>=100)show(cur+1);
   }
   requestAnimationFrame(tick);
