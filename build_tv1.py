@@ -223,26 +223,26 @@ def build():
 
     from urllib.parse import quote as _urlq
     def make_quote_img_slide(fname):
-        url = "quotes/" + _urlq(fname)
+        data = to_b64(os.path.join("quotes", fname))
         return (
             f'<div class="slide slide-quote-img">'
-            f'<div class="qimg-bg" style="background-image:url(\'{url}\')"></div>'
+            f'<div class="qimg-bg" style="background-image:url(\'{data}\')"></div>'
             f'</div>'
         )
 
     def make_promo_img_slide(fname):
-        url = "promos/" + _urlq(fname)
+        data = to_b64(os.path.join("promos", fname))
         return (
             f'<div class="slide slide-quote-img slide-promo-img">'
-            f'<div class="qimg-bg" style="background-image:url(\'{url}\')"></div>'
+            f'<div class="qimg-bg" style="background-image:url(\'{data}\')"></div>'
             f'</div>'
         )
 
     def make_ad_img_slide(fname):
-        url = "ads/" + _urlq(fname)  # junction: ads -> ../술광고등
+        data = to_b64(os.path.join(ADS_DIR, fname))
         return (
             f'<div class="slide slide-quote-img slide-ad-img">'
-            f'<div class="qimg-bg" style="background-image:url(\'{url}\')"></div>'
+            f'<div class="qimg-bg" style="background-image:url(\'{data}\')"></div>'
             f'</div>'
         )
 
