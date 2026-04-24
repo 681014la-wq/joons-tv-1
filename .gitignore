@@ -4,9 +4,8 @@ __pycache__/
 *.bak
 test_img.jpg
 
-# 대용량 미디어 폴더 (GitHub 용량 초과)
-ads/
-quotes/
+# 대용량 미디어 폴더 (Fire Stick 재생 불가 → push 필요)
+# ads/ 와 quotes/ 는 GitHub Pages 에 올려야 함
 videos/
 wisdom_data_off/
 promos/
