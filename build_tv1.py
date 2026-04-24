@@ -6,7 +6,10 @@ from menu_utils import find_local_image, img_to_base64
 
 MENU_JSON  = "menu.json"
 IMAGE_DIR  = "images"
-OUTPUT_HTML= "index1.html"
+LITE        = bool(os.environ.get("TV_LITE"))
+OUTPUT_HTML = "index_lite.html" if LITE else "index1.html"
+LITE_ADS    = 30   # TV_LITE 시 광고 축소 (원본 274 → 30)
+LITE_QUOTES = 20   # TV_LITE 시 명언 축소
 ADS_DIR    = os.path.join("..", "술광고등")  # 술/음료 광고 이미지 폴더
 
 # 음식 관련 태그 (이 태그 → 스시 이미지 배경)
@@ -182,6 +185,9 @@ def build():
                                if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))])
         random.shuffle(quote_images)
     print(f"이미지 명언: {len(quote_images)}장")
+    if LITE and len(quote_images) > LITE_QUOTES:
+        quote_images = random.sample(quote_images, LITE_QUOTES)
+        print(f"[LITE] 명언 축소: {LITE_QUOTES}장")
     quote_queue = list(quote_images)
     # QUOTE_BATCH 는 광고와 동일하게 아래에서 동적 계산
 
@@ -203,6 +209,9 @@ def build():
                             if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))])
         random.shuffle(ad_images)
     print(f"술광고 이미지: {len(ad_images)}장")
+    if LITE and len(ad_images) > LITE_ADS:
+        ad_images = random.sample(ad_images, LITE_ADS)
+        print(f"[LITE] 광고 축소: {LITE_ADS}장")
     # 자리 개수 추정: 커버 1 + 메뉴 청크 수 (3개씩)
     import math as _math
     est_slots = 1 + sum(_math.ceil(len(items) / 3) for items in cats.values())
