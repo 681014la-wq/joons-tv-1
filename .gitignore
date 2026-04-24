@@ -3,3 +3,29 @@ __pycache__/
 *.pyo
 *.bak
 test_img.jpg
+
+# 대용량 미디어 폴더 (GitHub 용량 초과)
+ads/
+quotes/
+videos/
+wisdom_data_off/
+promos/
+images/
+인물/
+
+# 스크래치/프롬프트 텍스트
+prompt_character_base.txt
+prompts_*.txt
+리뷰.txt
+맥주소주*.txt
+사무라이*.txt
+
+# 구버전 HTML variants
+index_A.html
+index_B.html
+index_C.html
+index_D.html
+
+# 대용량 바이너리
+*.pptx
+find_api_url_*.webp

@@ -14,87 +14,87 @@ FOOD_TAGS = {"food", "sushi", "chef", "health", "history", "salmon"}
 # 인물 초상화 매핑 (본인 전용 이미지)
 WHO_TO_BG = {
     # 기존 초상화
-    "SOCRATES":           "bg_socrates.png",
-    "ARISTOTLE":          "bg_aristotle.png",
-    "EINSTEIN":           "bg_einstein.png",
-    "HIPPOKRATES":        "bg_hippokrates.png",
-    "LAO TZU":            "bg_laotzu.png",
-    "CONFUCIUS":          "bg_confucius.png",
-    "CONFUCUIUS":         "bg_confucius.png",
-    "STEVE JOBS":         "bg_jobs.png",
-    "MAHATMA GANDHI":     "bg_gandhi.png",
-    "BRUCE LEE":          "bg_brucelee.png",
+    "SOCRATES":           "인물/bg_socrates.png",
+    "ARISTOTLE":          "인물/bg_aristotle.png",
+    "EINSTEIN":           "인물/bg_einstein.png",
+    "HIPPOKRATES":        "인물/bg_hippokrates.png",
+    "LAO TZU":            "인물/bg_laotzu.png",
+    "CONFUCIUS":          "인물/bg_confucius.png",
+    "CONFUCUIUS":         "인물/bg_confucius.png",
+    "STEVE JOBS":         "인물/bg_jobs.png",
+    "MAHATMA GANDHI":     "인물/bg_gandhi.png",
+    "BRUCE LEE":          "인물/bg_brucelee.png",
     "ZEN WISDOM":         "bg_zen.png",
     "DALAI LAMA":         "bg_zen.png",
     "KOREAN PROVERB":     "bg_scholar.png",
     # Canva AI 생성 초상화
-    "FRIEDRICH NIETZSCHE": "bg_nietzsche.png",
-    "PLATO":              "bg_plato.png",
-    "WINSTON CHURCHILL":  "bg_churchill.png",
-    "BENJAMIN FRANKLIN":  "bg_franklin.png",
-    "MARK TWAIN":         "bg_marktwain.png",
-    "PABLO PICASSO":      "bg_picasso.png",
-    "LEONARDO DA VINCI":  "bg_davinci.png",
-    "MARCUS AURELIUS":    "bg_marcusaurelius.png",
-    "HENRY FORD":         "bg_henryford.png",
-    "HELEN KELLER":       "bg_helenkeller.png",
-    "MAYA ANGELOU":       "bg_mayaangelou.png",
-    "RUMI":               "bg_rumi.jpg",
-    "RAY DALIO":          "bg_dalio.jpg",
+    "FRIEDRICH NIETZSCHE": "인물/bg_nietzsche.png",
+    "PLATO":              "인물/bg_plato.png",
+    "WINSTON CHURCHILL":  "인물/bg_churchill.png",
+    "BENJAMIN FRANKLIN":  "인물/bg_franklin.png",
+    "MARK TWAIN":         "인물/bg_marktwain.png",
+    "PABLO PICASSO":      "인물/bg_picasso.png",
+    "LEONARDO DA VINCI":  "인물/bg_davinci.png",
+    "MARCUS AURELIUS":    "인물/bg_marcusaurelius.png",
+    "HENRY FORD":         "인물/bg_henryford.png",
+    "HELEN KELLER":       "인물/bg_helenkeller.png",
+    "MAYA ANGELOU":       "인물/bg_mayaangelou.png",
+    "RUMI":               "인물/bg_rumi.jpg",
+    "RAY DALIO":          "인물/bg_dalio.jpg",
     "SUSHI MASTER":       "bg_sushi_master.png",
     "SHOKUNIN":           "bg_sushi_master.png",
     "CHEF":               "bg_chef.png",
     # 추가 초상화 (10명)
-    "ANNE FRANK":         "bg_annefrank.png",
-    "SENECA":             "bg_seneca.png",
-    "OSCAR WILDE":        "bg_oscarwilde.png",
-    "VINCENT VAN GOGH":   "bg_vangogh.png",
-    "EPICURUS":           "bg_epicurus.png",
-    "WAYNE GRETZKY":      "bg_gretzky.png",
-    "NAPOLEON HILL":      "bg_napoleonhill.png",
-    "JIM ROHN":           "bg_jimrohn.png",
-    "MARIE MODIANO":      "bg_mariemodiano.png",
-    "ST. AUGUSTINE":      "bg_staugustine.png",
+    "ANNE FRANK":         "인물/bg_annefrank.png",
+    "SENECA":             "인물/bg_seneca.png",
+    "OSCAR WILDE":        "인물/bg_oscarwilde.png",
+    "VINCENT VAN GOGH":   "인물/bg_vangogh.png",
+    "EPICURUS":           "인물/bg_epicurus.png",
+    "WAYNE GRETZKY":      "인물/bg_gretzky.png",
+    "NAPOLEON HILL":      "인물/bg_napoleonhill.png",
+    "JIM ROHN":           "인물/bg_jimrohn.png",
+    "MARIE MODIANO":      "인물/bg_mariemodiano.png",
+    "ST. AUGUSTINE":      "인물/bg_staugustine.png",
 }
 
 # 인물 초상화 색상
 PORTRAIT_COLORS = {
-    "bg_socrates.png":     {"accent": "#00FF9D", "atmos": "#0A2F1F"},
-    "bg_aristotle.png":    {"accent": "#00E5FF", "atmos": "#0A1A2F"},
-    "bg_einstein.png":     {"accent": "#BB86FC", "atmos": "#1A0A2F"},
-    "bg_hippokrates.png":  {"accent": "#76FF03", "atmos": "#0F2F0A"},
-    "bg_laotzu.png":       {"accent": "#FFD54F", "atmos": "#2F1A0A"},
-    "bg_confucius.png":    {"accent": "#FFEA00", "atmos": "#2F2F0A"},
-    "bg_jobs.png":         {"accent": "#FFFFFF", "atmos": "#0A0A0A"},
-    "bg_gandhi.png":       {"accent": "#FFAB40", "atmos": "#2F1F0A"},
-    "bg_brucelee.png":     {"accent": "#FF1744", "atmos": "#2F0A0A"},
+    "인물/bg_socrates.png":     {"accent": "#00FF9D", "atmos": "#0A2F1F"},
+    "인물/bg_aristotle.png":    {"accent": "#00E5FF", "atmos": "#0A1A2F"},
+    "인물/bg_einstein.png":     {"accent": "#BB86FC", "atmos": "#1A0A2F"},
+    "인물/bg_hippokrates.png":  {"accent": "#76FF03", "atmos": "#0F2F0A"},
+    "인물/bg_laotzu.png":       {"accent": "#FFD54F", "atmos": "#2F1A0A"},
+    "인물/bg_confucius.png":    {"accent": "#FFEA00", "atmos": "#2F2F0A"},
+    "인물/bg_jobs.png":         {"accent": "#FFFFFF", "atmos": "#0A0A0A"},
+    "인물/bg_gandhi.png":       {"accent": "#FFAB40", "atmos": "#2F1F0A"},
+    "인물/bg_brucelee.png":     {"accent": "#FF1744", "atmos": "#2F0A0A"},
     "bg_zen.png":          {"accent": "#B2FF59", "atmos": "#0A1F0F"},
     "bg_scholar.png":      {"accent": "#80D8FF", "atmos": "#0A1F2F"},
-    "bg_nietzsche.png":    {"accent": "#FF8A65", "atmos": "#1A0A05"},
-    "bg_plato.png":        {"accent": "#FFD54F", "atmos": "#1A1A0A"},
-    "bg_churchill.png":    {"accent": "#90CAF9", "atmos": "#0A0F1A"},
-    "bg_franklin.png":     {"accent": "#FFB74D", "atmos": "#1A0F05"},
-    "bg_marktwain.png":    {"accent": "#BCAAA4", "atmos": "#1A0F0A"},
-    "bg_picasso.png":      {"accent": "#CE93D8", "atmos": "#1A0A1A"},
-    "bg_davinci.png":      {"accent": "#A1887F", "atmos": "#1A0F0A"},
-    "bg_marcusaurelius.png": {"accent": "#FFD700", "atmos": "#1A1A05"},
-    "bg_henryford.png":    {"accent": "#B0BEC5", "atmos": "#0A0F1A"},
-    "bg_helenkeller.png":  {"accent": "#F48FB1", "atmos": "#1A0A0F"},
-    "bg_mayaangelou.png":  {"accent": "#FFB300", "atmos": "#1A0F05"},
-    "bg_rumi.jpg":         {"accent": "#FFD54F", "atmos": "#1A0F05"},
-    "bg_dalio.jpg":        {"accent": "#8AB1FF", "atmos": "#050A1A"}, # Gemini Nano Style
+    "인물/bg_nietzsche.png":    {"accent": "#FF8A65", "atmos": "#1A0A05"},
+    "인물/bg_plato.png":        {"accent": "#FFD54F", "atmos": "#1A1A0A"},
+    "인물/bg_churchill.png":    {"accent": "#90CAF9", "atmos": "#0A0F1A"},
+    "인물/bg_franklin.png":     {"accent": "#FFB74D", "atmos": "#1A0F05"},
+    "인물/bg_marktwain.png":    {"accent": "#BCAAA4", "atmos": "#1A0F0A"},
+    "인물/bg_picasso.png":      {"accent": "#CE93D8", "atmos": "#1A0A1A"},
+    "인물/bg_davinci.png":      {"accent": "#A1887F", "atmos": "#1A0F0A"},
+    "인물/bg_marcusaurelius.png": {"accent": "#FFD700", "atmos": "#1A1A05"},
+    "인물/bg_henryford.png":    {"accent": "#B0BEC5", "atmos": "#0A0F1A"},
+    "인물/bg_helenkeller.png":  {"accent": "#F48FB1", "atmos": "#1A0A0F"},
+    "인물/bg_mayaangelou.png":  {"accent": "#FFB300", "atmos": "#1A0F05"},
+    "인물/bg_rumi.jpg":         {"accent": "#FFD54F", "atmos": "#1A0F05"},
+    "인물/bg_dalio.jpg":        {"accent": "#8AB1FF", "atmos": "#050A1A"}, # Gemini Nano Style
     "bg_sushi_master.png": {"accent": "#FFD54F", "atmos": "#0A0A0A"},
     "bg_chef.png":         {"accent": "#C9A96E", "atmos": "#0F0F0F"},
-    "bg_annefrank.png":    {"accent": "#FFB74D", "atmos": "#1A0F05"},
-    "bg_seneca.png":       {"accent": "#CD853F", "atmos": "#1A0A05"},
-    "bg_oscarwilde.png":   {"accent": "#CE93D8", "atmos": "#1A0A1A"},
-    "bg_vangogh.png":      {"accent": "#FFD700", "atmos": "#0A0F1A"},
-    "bg_epicurus.png":     {"accent": "#FFB74D", "atmos": "#1A0F0A"},
-    "bg_gretzky.png":      {"accent": "#90CAF9", "atmos": "#0A0A1A"},
-    "bg_napoleonhill.png": {"accent": "#FFB74D", "atmos": "#1A0F05"},
-    "bg_jimrohn.png":      {"accent": "#FFB300", "atmos": "#1A0F05"},
-    "bg_mariemodiano.png": {"accent": "#F48FB1", "atmos": "#1A0A0F"},
-    "bg_staugustine.png":  {"accent": "#FFD54F", "atmos": "#1A0F0A"},
+    "인물/bg_annefrank.png":    {"accent": "#FFB74D", "atmos": "#1A0F05"},
+    "인물/bg_seneca.png":       {"accent": "#CD853F", "atmos": "#1A0A05"},
+    "인물/bg_oscarwilde.png":   {"accent": "#CE93D8", "atmos": "#1A0A1A"},
+    "인물/bg_vangogh.png":      {"accent": "#FFD700", "atmos": "#0A0F1A"},
+    "인물/bg_epicurus.png":     {"accent": "#FFB74D", "atmos": "#1A0F0A"},
+    "인물/bg_gretzky.png":      {"accent": "#90CAF9", "atmos": "#0A0A1A"},
+    "인물/bg_napoleonhill.png": {"accent": "#FFB74D", "atmos": "#1A0F05"},
+    "인물/bg_jimrohn.png":      {"accent": "#FFB300", "atmos": "#1A0F05"},
+    "인물/bg_mariemodiano.png": {"accent": "#F48FB1", "atmos": "#1A0A0F"},
+    "인물/bg_staugustine.png":  {"accent": "#FFD54F", "atmos": "#1A0F0A"},
 }
 
 # 카테고리별 전용 배경 이미지 + 색상
@@ -102,7 +102,7 @@ CATEGORY_BG = {
     "history":    {"file": "bg_history.png",    "accent": "#FFB74D", "atmos": "#1A0F05"},
     "science":    {"file": "bg_science.png",    "accent": "#00E5FF", "atmos": "#050A1A"},
     "psychology": {"file": "bg_psychology.png", "accent": "#CE93D8", "atmos": "#0F051A"},
-    "economics":  {"file": "bg_dalio.jpg",       "accent": "#8AB1FF", "atmos": "#051A0A"},
+    "economics":  {"file": "인물/bg_dalio.jpg",       "accent": "#8AB1FF", "atmos": "#051A0A"},
 }
 
 # 음식 명언 배경 색상 (스시 이미지용 - 따뜻한 골드 톤)
@@ -173,6 +173,56 @@ def build():
     random.shuffle(wisdom_list)
     print(f"명언 총: {len(wisdom_list)}개")
 
+    # 이미지 명언 로드 (quotes/ 폴더, 파일 참조 방식 — base64 인코딩 안 함)
+    quote_img_dir = "quotes"
+    quote_images = []
+    if os.path.isdir(quote_img_dir):
+        quote_images = sorted([f for f in os.listdir(quote_img_dir)
+                               if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))])
+        random.shuffle(quote_images)
+    print(f"이미지 명언: {len(quote_images)}장")
+    QUOTE_BATCH = 3  # 자리당 연속 재생 장수 (메뉴 광고 비중 우선)
+    quote_queue = list(quote_images)
+
+    # 프로모션 이미지 로드 (promos/ 폴더)
+    promo_img_dir = "promos"
+    promo_images = []
+    if os.path.isdir(promo_img_dir):
+        promo_images = sorted([f for f in os.listdir(promo_img_dir)
+                               if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))])
+        random.shuffle(promo_images)
+    print(f"프로모션 이미지: {len(promo_images)}장")
+    PROMO_PER_SLOT = 1  # 자리당 프로모션 장수 (명언 앞에 삽입)
+    promo_queue = list(promo_images)
+
+    from urllib.parse import quote as _urlq
+    def make_quote_img_slide(fname):
+        url = "quotes/" + _urlq(fname)
+        return (
+            f'<div class="slide slide-quote-img">'
+            f'<div class="qimg-bg" style="background-image:url(\'{url}\')"></div>'
+            f'</div>'
+        )
+
+    def make_promo_img_slide(fname):
+        url = "promos/" + _urlq(fname)
+        return (
+            f'<div class="slide slide-quote-img slide-promo-img">'
+            f'<div class="qimg-bg" style="background-image:url(\'{url}\')"></div>'
+            f'</div>'
+        )
+
+    def pop_slot_slides():
+        """자리 1개 = 프로모션 N장 + 명언 M장 (큐 비면 스킵)"""
+        out = []
+        for _ in range(PROMO_PER_SLOT):
+            if promo_queue:
+                out.append(make_promo_img_slide(promo_queue.pop(0)))
+        for _ in range(QUOTE_BATCH):
+            if quote_queue:
+                out.append(make_quote_img_slide(quote_queue.pop(0)))
+        return out
+
     # Pixabay 스시 이미지를 음식 명언 배경으로 사용
     sushi_bg_images = sorted([f for f in os.listdir(".") if f.startswith("bg_sushi_") and f.endswith(".jpg")])
     if not sushi_bg_images:
@@ -213,30 +263,8 @@ def build():
         '</div>'
     )
 
-    # 커버 직후 음식 명언 1개 삽입
-    food_quotes = [q for q in wisdom_list if q.get("bg_tag", "") in FOOD_TAGS]
-    if food_quotes:
-        d = food_quotes[0]
-        wisdom_list.remove(d)
-        bg_path = sushi_bg_images[sushi_bg_idx % len(sushi_bg_images)]
-        sushi_bg_idx += 1
-        bg_b64 = get_bg_b64(bg_path)
-        ac, at = FOOD_ACCENT["accent"], FOOD_ACCENT["atmos"]
-        slides.append(
-            f'<div class="slide slide-extra" data-accent="{ac}" data-atmos="{at}">'
-            f'<div class="extra-left">'
-            f'  <div class="zoom-wrap"><div class="zoom-img" style="background-image:url(\'{bg_b64}\')"></div></div>'
-            f'  <div class="extra-overlay" style="background:linear-gradient(to right,transparent 55%,{at} 96%)"></div>'
-            f'</div>'
-            f'<div class="extra-right" style="background:{at}">'
-            f'  <div class="extra-content">'
-            f'    <div class="extra-who" style="color:{ac};border-color:{ac}55">{d["who"]}</div>'
-            f'    <div class="extra-en">{d["en"]}</div>'
-            f'    <div class="extra-ko" style="color:{ac}">{d["ko"]}</div>'
-            f'  </div>'
-            f'</div>'
-            f'</div>'
-        )
+    # 커버 직후 프로모션 + 명언 batch
+    slides.extend(pop_slot_slides())
 
     for cat, items in cats.items():
         accent = CAT_COLORS.get(cat.upper(), "#C9A96E")
@@ -273,97 +301,8 @@ def build():
                 f'</div>'
             )
 
-            # 메뉴 슬라이드 사이에 명언 삽입
-            if wisdom_idx < len(wisdom_list):
-                d = wisdom_list[wisdom_idx]; wisdom_idx += 1
-                who = d.get("who", "").upper()
-                tag = d.get("bg_tag", "")
-
-                def pick_sushi_bg():
-                    """스시 배경 선택 (소진 시 리셋, 초상화/카테고리는 보호)"""
-                    nonlocal sushi_bg_idx
-                    for _ in range(len(sushi_bg_images)):
-                        path = sushi_bg_images[sushi_bg_idx % len(sushi_bg_images)]
-                        sushi_bg_idx += 1
-                        if path not in used_sushi:
-                            used_sushi.add(path)
-                            return path
-                    # 스시만 리셋 (초상화/카테고리는 절대 안 건드림)
-                    used_sushi.clear()
-                    path = sushi_bg_images[sushi_bg_idx % len(sushi_bg_images)]
-                    sushi_bg_idx += 1
-                    used_sushi.add(path)
-                    return path
-
-                if tag in CATEGORY_BG:
-                    # 카테고리: 1회만 사용, 이후 스시 로테이션
-                    cat_info = CATEGORY_BG[tag]
-                    cat_file = cat_info["file"]
-                    if cat_file not in used_once and os.path.exists(cat_file):
-                        used_once.add(cat_file)
-                        bg_b64 = get_bg_b64(cat_file)
-                    else:
-                        bg_b64 = get_bg_b64(pick_sushi_bg())
-                    col = {"accent": cat_info["accent"], "atmos": cat_info["atmos"]}
-                elif tag in FOOD_TAGS:
-                    # 음식 명언 → 키워드 매칭 우선
-                    kw_imgs = find_keyword_bg(d["en"])
-                    picked = False
-                    if kw_imgs:
-                        for img in kw_imgs:
-                            if img not in used_once:
-                                used_once.add(img)
-                                bg_b64 = get_bg_b64(img)
-                                picked = True
-                                break
-                    if not picked:
-                        bg_b64 = get_bg_b64(pick_sushi_bg())
-                    col = FOOD_ACCENT
-                else:
-                    # 비음식 명언 → 인물 초상화 (1회만)
-                    bg_file = None
-                    for k, v in WHO_TO_BG.items():
-                        if k in who:
-                            bg_file = v; break
-
-                    if bg_file and os.path.exists(bg_file) and bg_file not in used_once:
-                        used_once.add(bg_file)
-                        bg_b64 = get_bg_b64(bg_file)
-                        col = PORTRAIT_COLORS.get(bg_file, FOOD_ACCENT)
-                    else:
-                        # 인물 초상화가 없거나 이미 사용된 경우: 카테고리별 제너릭 배경 또는 공용 지혜 배경 사용
-                        if tag in CATEGORY_BG:
-                            cinfo = CATEGORY_BG[tag]
-                            bg_b64 = get_bg_b64(cinfo["file"])
-                            col = {"accent": cinfo["accent"], "atmos": cinfo["atmos"]}
-                        elif tag in ["philosophy", "wisdom", "success", "life"]:
-                            # 공용 지혜 배경 (학자 또는 젠 스타일)
-                            gen_file = "bg_scholar.png" if tag in ["philosophy", "wisdom"] else "bg_zen.png"
-                            bg_b64 = get_bg_b64(gen_file)
-                            col = PORTRAIT_COLORS.get(gen_file, FOOD_ACCENT)
-                        else:
-                            # 최후의 수단: 스시 배경
-                            bg_b64 = get_bg_b64(pick_sushi_bg())
-                            col = FOOD_ACCENT
-
-                ac = col["accent"]
-                at = col["atmos"]
-
-                slides.append(
-                    f'<div class="slide slide-extra" data-accent="{ac}" data-atmos="{at}">'
-                    f'<div class="extra-left">'
-                    f'  <div class="zoom-wrap"><div class="zoom-img" style="background-image:url(\'{bg_b64}\')"></div></div>'
-                    f'  <div class="extra-overlay" style="background:linear-gradient(to right,transparent 55%,{at} 96%)"></div>'
-                    f'</div>'
-                    f'<div class="extra-right" style="background:{at}">'
-                    f'  <div class="extra-content">'
-                    f'    <div class="extra-who" style="color:{ac};border-color:{ac}55">{d["who"]}</div>'
-                    f'    <div class="extra-en">{d["en"]}</div>'
-                    f'    <div class="extra-ko" style="color:{ac}">{d["ko"]}</div>'
-                    f'  </div>'
-                    f'</div>'
-                    f'</div>'
-                )
+            # 메뉴 슬라이드 사이에 프로모션 + 명언 batch
+            slides.extend(pop_slot_slides())
 
     html = '''<!DOCTYPE html>
 <html lang="en">
@@ -401,6 +340,12 @@ body{width:100vw;height:100vh;overflow:hidden;background:#060609;color:#F0EDE6;f
 .card-body{padding:2vh 1.5vw;text-align:center;flex-shrink:0;}
 .card-name{font-size:clamp(16px,2.2vmin,26px);font-weight:400;margin-bottom:0.8vh;}
 .card-price{font-size:clamp(22px,2.8vmin,34px);font-weight:800;}
+
+/* 이미지 명언 슬라이드 - 풀스크린 + Ken Burns */
+.slide-quote-img{background:#000;padding:0;}
+.qimg-bg{position:absolute;inset:0;background-size:contain;background-position:center;background-repeat:no-repeat;}
+.slide-quote-img.active .qimg-bg{animation:qKenBurns 10s ease-out forwards;}
+@keyframes qKenBurns{0%{transform:scale(1);}100%{transform:scale(1.06);}}
 
 /* 명언 슬라이드 - 50:50 + Ken Burns 줌 */
 .slide-extra{flex-direction:row;align-items:stretch;}
