@@ -7,9 +7,11 @@ from menu_utils import find_local_image, img_to_base64
 MENU_JSON  = "menu.json"
 IMAGE_DIR  = "images"
 LITE        = bool(os.environ.get("TV_LITE"))
-OUTPUT_HTML = "index_lite.html" if LITE else "index1.html"
+VIDEO_MODE  = bool(os.environ.get("TV_VIDEO"))  # URL 방식 (base64 안 함, 렌더링용)
+OUTPUT_HTML = "index_lite.html" if LITE else ("index_video.html" if VIDEO_MODE else "index1.html")
 LITE_ADS    = 30   # TV_LITE 시 광고 축소 (원본 274 → 30)
 LITE_QUOTES = 20   # TV_LITE 시 명언 축소
+SPLIT       = int(os.environ.get("TV_SPLIT", "0"))  # N분할 출력 (>=2 이면 part1.html ~ partN.html)
 ADS_DIR    = os.path.join("..", "술광고등")  # 술/음료 광고 이미지 폴더
 
 # 음식 관련 태그 (이 태그 → 스시 이미지 배경)
@@ -222,27 +224,33 @@ def build():
     ad_queue = list(ad_images)
 
     from urllib.parse import quote as _urlq
+    def _img_ref(folder_abs_or_rel, fname):
+        """VIDEO_MODE 면 상대경로 URL, 아니면 base64 data URI 반환."""
+        if VIDEO_MODE:
+            return folder_abs_or_rel.rstrip("/\\").replace("\\", "/") + "/" + _urlq(fname)
+        return to_b64(os.path.join(folder_abs_or_rel, fname))
+
     def make_quote_img_slide(fname):
-        data = to_b64(os.path.join("quotes", fname))
+        ref = _img_ref("quotes", fname)
         return (
             f'<div class="slide slide-quote-img">'
-            f'<div class="qimg-bg" style="background-image:url(\'{data}\')"></div>'
+            f'<div class="qimg-bg" style="background-image:url(\'{ref}\')"></div>'
             f'</div>'
         )
 
     def make_promo_img_slide(fname):
-        data = to_b64(os.path.join("promos", fname))
+        ref = _img_ref("promos", fname)
         return (
             f'<div class="slide slide-quote-img slide-promo-img">'
-            f'<div class="qimg-bg" style="background-image:url(\'{data}\')"></div>'
+            f'<div class="qimg-bg" style="background-image:url(\'{ref}\')"></div>'
             f'</div>'
         )
 
     def make_ad_img_slide(fname):
-        data = to_b64(os.path.join(ADS_DIR, fname))
+        ref = _img_ref(ADS_DIR, fname)
         return (
             f'<div class="slide slide-quote-img slide-ad-img">'
-            f'<div class="qimg-bg" style="background-image:url(\'{data}\')"></div>'
+            f'<div class="qimg-bg" style="background-image:url(\'{ref}\')"></div>'
             f'</div>'
         )
 
@@ -465,9 +473,9 @@ function tick(){
     const s=slides[cur];
     const fast=s.classList.contains('slide-title')||s.classList.contains('slide-menu');
     const logo=s.classList.contains('slide-logo');
-    const dur=logo?4000:(fast?3000:10000);
+    const dur=logo?4000:(fast?3000:5000);
     const pct=Math.min((Date.now()-t0)/dur*100,100);
-    if(pct>=100)show(cur+1);
+    if(pct>=100){if(typeof NEXT!=='undefined'&&cur===slides.length-1)location.href=NEXT;else show(cur+1);}
   }
   requestAnimationFrame(tick);
 }
@@ -491,7 +499,22 @@ tick();
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
-    
+
+    # === N분할 출력 (TV_SPLIT >= 2) ===
+    if SPLIT >= 2:
+        n = len(slides)
+        chunk = (n + SPLIT - 1) // SPLIT
+        marker = '<div class="slideshow" id="ss">' + "".join(slides) + '</div>'
+        for i in range(SPLIT):
+            part_slides = slides[i*chunk:(i+1)*chunk]
+            nxt = f"part{((i+1) % SPLIT) + 1}.html"
+            part_body = '<div class="slideshow" id="ss">' + "".join(part_slides) + '</div>'
+            inject = f"<script>const NEXT='{nxt}';</script>"
+            part_html = html.replace(marker, inject + part_body)
+            with open(f"part{i+1}.html", "w", encoding="utf-8") as pf:
+                pf.write(part_html)
+        print(f"[SPLIT={SPLIT}] part1.html ~ part{SPLIT}.html 생성 (각 ~{chunk}슬라이드)")
+
     total_extra = sum(1 for s in slides if 'slide-extra' in s)
     total_menu  = sum(1 for s in slides if 'slide-menu' in s)
     total_ad    = sum(1 for s in slides if 'slide-ad-img' in s)

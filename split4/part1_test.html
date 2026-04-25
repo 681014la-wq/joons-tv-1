@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>TEST PART1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{height:100vh;overflow:hidden;font-family:sans-serif;cursor:none;}
+.slide{position:absolute;inset:0;opacity:0;display:flex;align-items:center;justify-content:center;font-size:8vw;color:#fff;font-weight:bold;transition:opacity 0.3s;}
+.slide.active{opacity:1;}
+.s1{background:#0a0;}
+.s2{background:#a00;}
+</style>
+</head><body>
+<script>const NEXT='part2.html';</script>
+<div class="slide s1 active">PART1-TEST SLIDE 1 (2s)</div>
+<div class="slide s2">PART1-TEST SLIDE 2 (2s) &rarr; part2.html</div>
+<script>
+const slides=document.querySelectorAll('.slide');
+let cur=0,t0=Date.now(),paused=false;
+function show(i){
+  slides[cur].classList.remove('active');
+  cur=(i+slides.length)%slides.length;
+  slides[cur].classList.add('active');
+  t0=Date.now();
+}
+function tick(){
+  if(!paused){
+    const dur=2000;
+    if(Date.now()-t0>=dur){
+      if(typeof NEXT!=='undefined'&&cur===slides.length-1) location.href=NEXT;
+      else show(cur+1);
+    }
+  }
+  requestAnimationFrame(tick);
+}
+tick();
+</script>
+</body></html>
